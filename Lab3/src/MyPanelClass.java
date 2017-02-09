@@ -22,7 +22,7 @@ import javax.swing.JPanel;
 	                     //   Polygon p = new Polygon();
 	 
 	                        //Paint the background
-	                        g.setColor(Color.BLUE);
+	                        g.setColor(Color.WHITE);
 	                        g.fillRect(x1, y1, width+1, height+1);
 	                        //Draw a border
 //	                        g.setColor(Color.GREEN);
@@ -47,6 +47,21 @@ import javax.swing.JPanel;
 //	                        g.setColor(Color.YELLOW);
 //	                        g.fillPolygon(p);
 	                        
+	                        g.setColor(Color.RED);
+	                        g.fillRect(x1, y1, width, height/5);
+	                        g.fillRect(x1, y1+63, width, height/5);
+	                        g.fillRect(x1, y1+125, width, height/5);	    
+	                        
+		                    Polygon p3 = new Polygon();
+	                        g.setColor(Color.BLACK);
+	                        p3.addPoint(x1, y1); 
+	                        p3.addPoint(x1+90, y1+83);
+	                        
+	                        p3.addPoint(x1, y2);
+	                        
+	                        g.setColor(Color.BLUE);
+	                        g.fillPolygon(p3);                        
+	                        
 	                        Polygon p2 = new Polygon();
 	                        p2.addPoint(x1 + 25, y1 + 73);
 	                        p2.addPoint(x1 + 41, y1 + 73);
@@ -59,7 +74,13 @@ import javax.swing.JPanel;
 	                        p2.addPoint(x1 + 34, y1 + 98);
 	                        p2.addPoint(x1 + 38, y1 + 83);
 	                        g.setColor(Color.WHITE);
-	                        g.drawPolygon(p2);
+	                        g.fillPolygon(p2);
+	                        
+
+	                        
+	                        
+
+	                        
 	            }
 }
 
